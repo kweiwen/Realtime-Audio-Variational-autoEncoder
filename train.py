@@ -32,6 +32,8 @@ import rave.core
 import rave.dataset
 from rave.transforms import get_augmentations, add_augmentation
 
+log = logging.getLogger(__name__)
+
 FLAGS = flags.FLAGS
 
 flags.DEFINE_string('name', None, help='Name of the run', required=True)
