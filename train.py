@@ -1,13 +1,3 @@
-import shutil
-import typing as tp
-import logging
-import traceback
-
-import hydra
-from hydra.core.hydra_config import HydraConfig
-from hydra.utils import instantiate
-from omegaconf import DictConfig, OmegaConf
-
 import hashlib
 import os
 import sys
@@ -31,8 +21,6 @@ import rave
 import rave.core
 import rave.dataset
 from rave.transforms import get_augmentations, add_augmentation
-
-log = logging.getLogger(__name__)
 
 FLAGS = flags.FLAGS
 
