@@ -113,10 +113,10 @@ class EMA(pl.Callback):
         else:
             print("no ema weights available")
 
-    def state_dict(self) -> Dict[str, Any]:
+    def state_dict(self) -> tp.Dict[str, tp.Any]:
         return self.weights.copy()
 
-    def load_state_dict(self, state_dict: Dict[str, Any]) -> None:
+    def load_state_dict(self, state_dict: tp.Dict[str, tp.Any]) -> None:
         self.weights.update(state_dict)
 
 
@@ -261,9 +261,7 @@ def main(argv):
     if run is not None:
         print('loading state from file %s' % run)
         loaded = torch.load(run, map_location='cpu')
-        # model = model.load_state_dict(loaded)
         trainer.fit_loop.epoch_loop._batches_that_stepped = loaded['global_step']
-        # model = model.load_state_dict(loaded['state_dict'])
 
     with open(os.path.join(FLAGS.out_path, RUN_NAME, "config.gin"), "w") as config_out:
         config_out.write(gin.operative_config_str())
