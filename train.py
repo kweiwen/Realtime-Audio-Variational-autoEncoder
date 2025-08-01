@@ -1,7 +1,7 @@
 import hashlib
 import os
 import sys
-from typing import Any, Dict
+import typing as tp
 
 import gin
 import pytorch_lightning as pl
