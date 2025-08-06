@@ -9,3 +9,4 @@
 # yt-dlp -x --audio-format wav --audio-quality 10 -P .  "https://www.youtube.com/playlist?list=OLAK5uy_lCU4KIWcOAxpfyNXNpP7YNJa5F72P2rnY"
 
 
+
