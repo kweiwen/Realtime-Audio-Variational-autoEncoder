@@ -272,14 +272,14 @@ def main(argv):
 if __name__ == "__main__":
     sys.argv = [
         "train.py",
-        "--name", "D:\\NN\\tsga",
+        "--name", "/Users/kweiwentseng/Desktop/",
         "--config", "v2",
-        "--db_path", "D:\\NN\\dataset\\thesoulguidingarray\\preprocessed",
+        "--db_path", "/Users/kweiwentseng/Desktop/ShigeoSekitoElectone/preprocessed",
         "--val_every", "2000",
         "--channels", "2",
-        "--save_every", "100000",
+        "--save_every", "100",
         "--augment", "gain", "mute", "compress",
         "--batch", "4",
-        "--gpu", "0",
+        "--gpu", "-1",
     ]
     app.run(main)
