@@ -12,3 +12,4 @@ command = [
 ]
 
 subprocess.run(command, check=True)
+

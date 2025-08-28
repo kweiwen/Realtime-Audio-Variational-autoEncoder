@@ -81,3 +81,4 @@ hydra:
     dir: logs/${...experiment_dirname}/${now:%Y-%m-%d}_${now:%H-%M}
   job:
     chdir: False
+    
