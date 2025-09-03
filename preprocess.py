@@ -290,8 +290,8 @@ if __name__ == "__main__":
         "process.py",
         "--input_path=rain",
         "--output_path=rain/preprocessed",
-        "--channels=2",
+        "--channels=1",
         "--sampling_rate=44100",
-        "--num_signal=131072"
+        "--num_signal=32768"
     ]
     app.run(main)
