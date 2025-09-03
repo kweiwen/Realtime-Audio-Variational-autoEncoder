@@ -55,7 +55,7 @@ flags.DEFINE_string('ckpt',
                     help='Path to previous checkpoint of the run')
 flags.DEFINE_multi_string('override', default=[], help='Override gin binding')
 flags.DEFINE_integer('workers',
-                     default=8,
+                     default=16,
                      help='Number of workers to spawn for dataset loading')
 flags.DEFINE_multi_integer('gpu', default=None, help='GPU to use')
 flags.DEFINE_bool('derivative',
@@ -272,13 +272,14 @@ def main(argv):
 if __name__ == "__main__":
     sys.argv = [
         "train.py",
-        "--name", "/Users/kweiwentseng/Desktop/",
+        "--name", "D:\\NN\\rain2",
         "--config", "v2",
-        "--db_path", "/Users/kweiwentseng/Desktop/ShigeoSekitoElectone/preprocessed",
+        "--db_path", "D:\\NN\\dataset\\rain\\preprocessed",
         "--val_every", "2000",
-        "--channels", "2",
-        "--save_every", "100",
-        "--augment", "gain", "mute", "compress",
+        "--channels", "1",
+        "--save_every", "100000",
+        "--augment", "gain",
+        "--workers", "16",
         "--batch", "4",
         "--gpu", "-1",
     ]
